@@ -1,22 +1,39 @@
 {
-  "name": "electron-quick-start",
+  "name": "strut-editor-offline",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Strut Offline Editor",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/nadirbelarouci/strut-editor-offline",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "AppImage",
+    "Strut",
+    "Editor",
+    "Offline"
   ],
-  "author": "GitHub",
+  "author": "Nadir Belarouci",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^25.3.1",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {},
+  "build": {
+    "appId": "com.nadirbelarouci.struteditor",
+    "productName": "Strut Editor Offline",
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Development",
+      "icon": "build/icons/appicon.png"
+    },
+    "directories": {
+      "output": "dist"
+    }
   }
 }
